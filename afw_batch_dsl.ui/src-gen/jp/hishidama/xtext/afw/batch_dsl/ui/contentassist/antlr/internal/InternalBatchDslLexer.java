@@ -57,11 +57,10 @@ public class InternalBatchDslLexer extends Lexer {
         try {
             int _type = T__9;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:11:6: ( 'soon' )
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:11:8: 'soon'
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:11:6: ( ';' )
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:11:8: ';'
             {
-            match("soon"); 
-
+            match(';'); 
 
             }
 
@@ -78,10 +77,10 @@ public class InternalBatchDslLexer extends Lexer {
         try {
             int _type = T__10;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:12:7: ( ';' )
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:12:9: ';'
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:12:7: ( '.' )
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:12:9: '.'
             {
-            match(';'); 
+            match('.'); 
 
             }
 
@@ -98,10 +97,11 @@ public class InternalBatchDslLexer extends Lexer {
         try {
             int _type = T__11;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:13:7: ( '.' )
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:13:9: '.'
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:13:7: ( 'batch' )
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:13:9: 'batch'
             {
-            match('.'); 
+            match("batch"); 
+
 
             }
 
@@ -118,10 +118,10 @@ public class InternalBatchDslLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:14:7: ( 'batch' )
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:14:9: 'batch'
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:14:7: ( 'key' )
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:14:9: 'key'
             {
-            match("batch"); 
+            match("key"); 
 
 
             }
@@ -139,10 +139,10 @@ public class InternalBatchDslLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:15:7: ( 'key' )
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:15:9: 'key'
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:15:7: ( 'pattern' )
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:15:9: 'pattern'
             {
-            match("key"); 
+            match("pattern"); 
 
 
             }
@@ -160,10 +160,10 @@ public class InternalBatchDslLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:16:7: ( 'pattern' )
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:16:9: 'pattern'
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:16:7: ( 'required' )
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:16:9: 'required'
             {
-            match("pattern"); 
+            match("required"); 
 
 
             }
@@ -181,10 +181,10 @@ public class InternalBatchDslLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:17:7: ( 'required' )
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:17:9: 'required'
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:17:7: ( 'run' )
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:17:9: 'run'
             {
-            match("required"); 
+            match("run"); 
 
 
             }
@@ -202,10 +202,10 @@ public class InternalBatchDslLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:18:7: ( 'run' )
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:18:9: 'run'
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:18:7: ( 'as' )
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:18:9: 'as'
             {
-            match("run"); 
+            match("as"); 
 
 
             }
@@ -223,10 +223,10 @@ public class InternalBatchDslLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:19:7: ( 'as' )
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:19:9: 'as'
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:19:7: ( 'soon' )
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:19:9: 'soon'
             {
-            match("as"); 
+            match("soon"); 
 
 
             }
@@ -468,10 +468,10 @@ public class InternalBatchDslLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2501:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2501:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2413:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2413:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2501:11: ( '^' )?
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2413:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -480,7 +480,7 @@ public class InternalBatchDslLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2501:11: '^'
+                    // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2413:11: '^'
                     {
                     match('^'); 
 
@@ -498,7 +498,7 @@ public class InternalBatchDslLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2501:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2413:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -547,11 +547,11 @@ public class InternalBatchDslLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2503:13: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' )
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2503:15: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2415:13: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' )
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2415:15: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
             {
             match('\"'); 
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2503:19: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2415:19: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
             loop3:
             do {
                 int alt3=3;
@@ -567,7 +567,7 @@ public class InternalBatchDslLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2503:20: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+            	    // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2415:20: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
             	    {
             	    match('\\'); 
             	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -583,7 +583,7 @@ public class InternalBatchDslLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2503:65: ~ ( ( '\\\\' | '\"' ) )
+            	    // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2415:65: ~ ( ( '\\\\' | '\"' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -620,12 +620,12 @@ public class InternalBatchDslLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2505:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2505:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2417:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2417:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2505:24: ( options {greedy=false; } : . )*
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2417:24: ( options {greedy=false; } : . )*
             loop4:
             do {
                 int alt4=2;
@@ -650,7 +650,7 @@ public class InternalBatchDslLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2505:52: .
+            	    // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2417:52: .
             	    {
             	    matchAny(); 
 
@@ -680,10 +680,10 @@ public class InternalBatchDslLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2507:17: ( ( '//' | '--' ) (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2507:19: ( '//' | '--' ) (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2419:17: ( ( '//' | '--' ) (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2419:19: ( '//' | '--' ) (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2507:19: ( '//' | '--' )
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2419:19: ( '//' | '--' )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -701,7 +701,7 @@ public class InternalBatchDslLexer extends Lexer {
             }
             switch (alt5) {
                 case 1 :
-                    // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2507:20: '//'
+                    // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2419:20: '//'
                     {
                     match("//"); 
 
@@ -709,7 +709,7 @@ public class InternalBatchDslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2507:25: '--'
+                    // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2419:25: '--'
                     {
                     match("--"); 
 
@@ -719,7 +719,7 @@ public class InternalBatchDslLexer extends Lexer {
 
             }
 
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2507:31: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2419:31: (~ ( ( '\\n' | '\\r' ) ) )*
             loop6:
             do {
                 int alt6=2;
@@ -732,7 +732,7 @@ public class InternalBatchDslLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2507:31: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2419:31: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -752,7 +752,7 @@ public class InternalBatchDslLexer extends Lexer {
                 }
             } while (true);
 
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2507:47: ( ( '\\r' )? '\\n' )?
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2419:47: ( ( '\\r' )? '\\n' )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -761,9 +761,9 @@ public class InternalBatchDslLexer extends Lexer {
             }
             switch (alt8) {
                 case 1 :
-                    // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2507:48: ( '\\r' )? '\\n'
+                    // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2419:48: ( '\\r' )? '\\n'
                     {
-                    // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2507:48: ( '\\r' )?
+                    // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2419:48: ( '\\r' )?
                     int alt7=2;
                     int LA7_0 = input.LA(1);
 
@@ -772,7 +772,7 @@ public class InternalBatchDslLexer extends Lexer {
                     }
                     switch (alt7) {
                         case 1 :
-                            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2507:48: '\\r'
+                            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2419:48: '\\r'
                             {
                             match('\r'); 
 
@@ -804,10 +804,10 @@ public class InternalBatchDslLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2509:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2509:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2421:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2421:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2509:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../afw_batch_dsl.ui/src-gen/jp/hishidama/xtext/afw/batch_dsl/ui/contentassist/antlr/internal/InternalBatchDsl.g:2421:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt9=0;
             loop9:
             do {
@@ -1044,46 +1044,46 @@ public class InternalBatchDslLexer extends Lexer {
 
     protected DFA10 dfa10 = new DFA10(this);
     static final String DFA10_eotS =
-        "\1\uffff\1\22\2\uffff\6\22\15\uffff\6\22\1\50\2\22\1\uffff\2\22"+
-        "\1\55\3\22\1\61\1\uffff\2\22\1\64\1\22\1\uffff\3\22\1\uffff\2\22"+
-        "\1\uffff\1\73\3\22\1\77\1\22\1\uffff\3\22\1\uffff\1\104\1\105\1"+
-        "\106\1\22\3\uffff\1\110\1\uffff";
+        "\3\uffff\7\22\15\uffff\5\22\1\47\3\22\1\uffff\1\22\1\54\3\22\1"+
+        "\60\1\uffff\4\22\1\uffff\3\22\1\uffff\1\22\1\71\1\22\1\73\3\22\1"+
+        "\77\1\uffff\1\22\1\uffff\3\22\1\uffff\1\104\1\105\1\106\1\22\3\uffff"+
+        "\1\110\1\uffff";
     static final String DFA10_eofS =
         "\111\uffff";
     static final String DFA10_minS =
-        "\1\11\1\157\2\uffff\1\141\1\145\1\141\1\145\1\146\1\155\12\uffff"+
-        "\1\52\2\uffff\1\157\1\164\1\171\1\143\1\161\1\156\1\60\1\164\1\160"+
-        "\1\uffff\1\156\1\143\1\60\1\164\1\153\1\165\1\60\1\uffff\1\145\1"+
-        "\157\1\60\1\150\1\uffff\1\145\1\141\1\151\1\uffff\2\162\1\uffff"+
-        "\1\60\1\162\1\147\1\162\1\60\1\164\1\uffff\1\156\2\145\1\uffff\3"+
-        "\60\1\144\3\uffff\1\60\1\uffff";
+        "\1\11\2\uffff\1\141\1\145\1\141\1\145\1\146\1\157\1\155\12\uffff"+
+        "\1\52\2\uffff\1\164\1\171\1\143\1\161\1\156\1\60\1\164\1\157\1\160"+
+        "\1\uffff\1\143\1\60\1\164\1\153\1\165\1\60\1\uffff\1\145\1\156\1"+
+        "\157\1\150\1\uffff\1\145\1\141\1\151\1\uffff\1\162\1\60\1\162\1"+
+        "\60\1\162\1\147\1\162\1\60\1\uffff\1\164\1\uffff\1\156\2\145\1\uffff"+
+        "\3\60\1\144\3\uffff\1\60\1\uffff";
     static final String DFA10_maxS =
-        "\1\175\1\157\2\uffff\1\141\1\145\1\141\1\165\1\163\1\155\12\uffff"+
-        "\1\57\2\uffff\1\157\1\164\1\171\1\164\1\161\1\156\1\172\1\164\1"+
-        "\160\1\uffff\1\156\1\143\1\172\1\164\1\153\1\165\1\172\1\uffff\1"+
-        "\145\1\157\1\172\1\150\1\uffff\1\145\1\141\1\151\1\uffff\2\162\1"+
-        "\uffff\1\172\1\162\1\147\1\162\1\172\1\164\1\uffff\1\156\2\145\1"+
-        "\uffff\3\172\1\144\3\uffff\1\172\1\uffff";
+        "\1\175\2\uffff\1\141\1\145\1\141\1\165\1\163\1\157\1\155\12\uffff"+
+        "\1\57\2\uffff\1\164\1\171\1\164\1\161\1\156\1\172\1\164\1\157\1"+
+        "\160\1\uffff\1\143\1\172\1\164\1\153\1\165\1\172\1\uffff\1\145\1"+
+        "\156\1\157\1\150\1\uffff\1\145\1\141\1\151\1\uffff\1\162\1\172\1"+
+        "\162\1\172\1\162\1\147\1\162\1\172\1\uffff\1\164\1\uffff\1\156\2"+
+        "\145\1\uffff\3\172\1\144\3\uffff\1\172\1\uffff";
     static final String DFA10_acceptS =
-        "\2\uffff\1\2\1\3\6\uffff\1\15\1\16\1\17\1\20\1\21\1\22\1\23\1\24"+
-        "\1\25\1\26\1\uffff\1\30\1\31\11\uffff\1\27\7\uffff\1\11\4\uffff"+
-        "\1\5\3\uffff\1\10\2\uffff\1\1\6\uffff\1\4\3\uffff\1\12\4\uffff\1"+
-        "\14\1\6\1\13\1\uffff\1\7";
+        "\1\uffff\1\1\1\2\7\uffff\1\15\1\16\1\17\1\20\1\21\1\22\1\23\1\24"+
+        "\1\25\1\26\1\uffff\1\30\1\31\11\uffff\1\27\6\uffff\1\10\4\uffff"+
+        "\1\4\3\uffff\1\7\10\uffff\1\11\1\uffff\1\3\3\uffff\1\12\4\uffff"+
+        "\1\14\1\5\1\13\1\uffff\1\6";
     static final String DFA10_specialS =
         "\111\uffff}>";
     static final String[] DFA10_transitionS = {
             "\2\26\2\uffff\1\26\22\uffff\1\26\1\uffff\1\23\5\uffff\1\15"+
-            "\1\16\1\21\1\uffff\1\20\1\25\1\3\1\24\13\uffff\1\2\1\uffff\1"+
-            "\17\2\uffff\1\14\32\22\3\uffff\2\22\1\uffff\1\10\1\4\6\22\1"+
-            "\11\1\22\1\5\4\22\1\6\1\22\1\7\1\1\7\22\1\12\1\uffff\1\13",
+            "\1\16\1\21\1\uffff\1\20\1\25\1\2\1\24\13\uffff\1\1\1\uffff\1"+
+            "\17\2\uffff\1\14\32\22\3\uffff\2\22\1\uffff\1\7\1\3\6\22\1\11"+
+            "\1\22\1\4\4\22\1\5\1\22\1\6\1\10\7\22\1\12\1\uffff\1\13",
+            "",
+            "",
             "\1\27",
-            "",
-            "",
             "\1\30",
             "\1\31",
-            "\1\32",
-            "\1\33\17\uffff\1\34",
-            "\1\36\14\uffff\1\35",
+            "\1\32\17\uffff\1\33",
+            "\1\35\14\uffff\1\34",
+            "\1\36",
             "\1\37",
             "",
             "",
@@ -1100,39 +1100,39 @@ public class InternalBatchDslLexer extends Lexer {
             "",
             "\1\41",
             "\1\42",
-            "\1\43",
-            "\1\45\20\uffff\1\44",
+            "\1\44\20\uffff\1\43",
+            "\1\45",
             "\1\46",
-            "\1\47",
             "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
+            "\1\50",
             "\1\51",
             "\1\52",
             "",
             "\1\53",
-            "\1\54",
             "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
+            "\1\55",
             "\1\56",
             "\1\57",
-            "\1\60",
             "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
             "",
+            "\1\61",
             "\1\62",
             "\1\63",
-            "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
-            "\1\65",
+            "\1\64",
             "",
+            "\1\65",
             "\1\66",
             "\1\67",
+            "",
             "\1\70",
-            "",
-            "\1\71",
+            "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
             "\1\72",
-            "",
             "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
             "\1\74",
             "\1\75",
             "\1\76",
             "\12\22\7\uffff\32\22\4\uffff\1\22\1\uffff\32\22",
+            "",
             "\1\100",
             "",
             "\1\101",

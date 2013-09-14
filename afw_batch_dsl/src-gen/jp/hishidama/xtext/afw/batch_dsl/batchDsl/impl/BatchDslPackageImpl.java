@@ -7,7 +7,8 @@ import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchDslFactory;
 import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchDslPackage;
 import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchParameter;
 import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchStatement;
-import jp.hishidama.xtext.afw.batch_dsl.batchDsl.Import;
+import jp.hishidama.xtext.afw.batch_dsl.batchDsl.ImportDeclare;
+import jp.hishidama.xtext.afw.batch_dsl.batchDsl.PackageDeclare;
 import jp.hishidama.xtext.afw.batch_dsl.batchDsl.Script;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -37,14 +38,14 @@ public class BatchDslPackageImpl extends EPackageImpl implements BatchDslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass packageEClass = null;
+  private EClass packageDeclareEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass importEClass = null;
+  private EClass importDeclareEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -175,9 +176,9 @@ public class BatchDslPackageImpl extends EPackageImpl implements BatchDslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getPackage()
+  public EClass getPackageDeclare()
   {
-    return packageEClass;
+    return packageDeclareEClass;
   }
 
   /**
@@ -185,9 +186,9 @@ public class BatchDslPackageImpl extends EPackageImpl implements BatchDslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getPackage_Name()
+  public EAttribute getPackageDeclare_Name()
   {
-    return (EAttribute)packageEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)packageDeclareEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -195,9 +196,9 @@ public class BatchDslPackageImpl extends EPackageImpl implements BatchDslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getImport()
+  public EClass getImportDeclare()
   {
-    return importEClass;
+    return importDeclareEClass;
   }
 
   /**
@@ -205,9 +206,9 @@ public class BatchDslPackageImpl extends EPackageImpl implements BatchDslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getImport_Name()
+  public EAttribute getImportDeclare_Name()
   {
-    return (EAttribute)importEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)importDeclareEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -215,9 +216,9 @@ public class BatchDslPackageImpl extends EPackageImpl implements BatchDslPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getImport_Wildcard()
+  public EAttribute getImportDeclare_Wildcard()
   {
-    return (EAttribute)importEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)importDeclareEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -355,9 +356,19 @@ public class BatchDslPackageImpl extends EPackageImpl implements BatchDslPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getBatchStatement_Soon()
+  {
+    return (EAttribute)batchStatementEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getBatchStatement_After()
   {
-    return (EReference)batchStatementEClass.getEStructuralFeatures().get(2);
+    return (EReference)batchStatementEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -395,12 +406,12 @@ public class BatchDslPackageImpl extends EPackageImpl implements BatchDslPackage
     createEReference(scriptEClass, SCRIPT__IMPORTS);
     createEReference(scriptEClass, SCRIPT__LIST);
 
-    packageEClass = createEClass(PACKAGE);
-    createEAttribute(packageEClass, PACKAGE__NAME);
+    packageDeclareEClass = createEClass(PACKAGE_DECLARE);
+    createEAttribute(packageDeclareEClass, PACKAGE_DECLARE__NAME);
 
-    importEClass = createEClass(IMPORT);
-    createEAttribute(importEClass, IMPORT__NAME);
-    createEAttribute(importEClass, IMPORT__WILDCARD);
+    importDeclareEClass = createEClass(IMPORT_DECLARE);
+    createEAttribute(importDeclareEClass, IMPORT_DECLARE__NAME);
+    createEAttribute(importDeclareEClass, IMPORT_DECLARE__WILDCARD);
 
     batchDslEClass = createEClass(BATCH_DSL);
     createEAttribute(batchDslEClass, BATCH_DSL__COMMENT);
@@ -417,6 +428,7 @@ public class BatchDslPackageImpl extends EPackageImpl implements BatchDslPackage
     batchStatementEClass = createEClass(BATCH_STATEMENT);
     createEAttribute(batchStatementEClass, BATCH_STATEMENT__NAME);
     createEAttribute(batchStatementEClass, BATCH_STATEMENT__JOB_NAME);
+    createEAttribute(batchStatementEClass, BATCH_STATEMENT__SOON);
     createEReference(batchStatementEClass, BATCH_STATEMENT__AFTER);
   }
 
@@ -452,16 +464,16 @@ public class BatchDslPackageImpl extends EPackageImpl implements BatchDslPackage
 
     // Initialize classes and features; add operations and parameters
     initEClass(scriptEClass, Script.class, "Script", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getScript_Package(), this.getPackage(), null, "package", null, 0, 1, Script.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getScript_Imports(), this.getImport(), null, "imports", null, 0, -1, Script.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getScript_Package(), this.getPackageDeclare(), null, "package", null, 0, 1, Script.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getScript_Imports(), this.getImportDeclare(), null, "imports", null, 0, -1, Script.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getScript_List(), this.getBatchDsl(), null, "list", null, 0, -1, Script.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(packageEClass, jp.hishidama.xtext.afw.batch_dsl.batchDsl.Package.class, "Package", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPackage_Name(), ecorePackage.getEString(), "name", null, 0, -1, jp.hishidama.xtext.afw.batch_dsl.batchDsl.Package.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(packageDeclareEClass, PackageDeclare.class, "PackageDeclare", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPackageDeclare_Name(), ecorePackage.getEString(), "name", null, 0, 1, PackageDeclare.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(importEClass, Import.class, "Import", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getImport_Name(), ecorePackage.getEString(), "name", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getImport_Wildcard(), ecorePackage.getEBoolean(), "wildcard", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(importDeclareEClass, ImportDeclare.class, "ImportDeclare", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getImportDeclare_Name(), ecorePackage.getEString(), "name", null, 0, 1, ImportDeclare.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getImportDeclare_Wildcard(), ecorePackage.getEBoolean(), "wildcard", null, 0, 1, ImportDeclare.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(batchDslEClass, BatchDsl.class, "BatchDsl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getBatchDsl_Comment(), ecorePackage.getEString(), "comment", null, 0, 1, BatchDsl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -478,6 +490,7 @@ public class BatchDslPackageImpl extends EPackageImpl implements BatchDslPackage
     initEClass(batchStatementEClass, BatchStatement.class, "BatchStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getBatchStatement_Name(), ecorePackage.getEString(), "name", null, 0, 1, BatchStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getBatchStatement_JobName(), ecorePackage.getEString(), "jobName", null, 0, 1, BatchStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getBatchStatement_Soon(), ecorePackage.getEBoolean(), "soon", null, 0, 1, BatchStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getBatchStatement_After(), this.getBatchStatement(), null, "after", null, 0, -1, BatchStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource

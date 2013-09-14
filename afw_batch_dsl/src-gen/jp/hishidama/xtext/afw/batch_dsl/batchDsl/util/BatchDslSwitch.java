@@ -2,12 +2,7 @@
  */
 package jp.hishidama.xtext.afw.batch_dsl.batchDsl.util;
 
-import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchDsl;
-import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchDslPackage;
-import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchParameter;
-import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchStatement;
-import jp.hishidama.xtext.afw.batch_dsl.batchDsl.Import;
-import jp.hishidama.xtext.afw.batch_dsl.batchDsl.Script;
+import jp.hishidama.xtext.afw.batch_dsl.batchDsl.*;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -84,17 +79,17 @@ public class BatchDslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BatchDslPackage.PACKAGE:
+      case BatchDslPackage.PACKAGE_DECLARE:
       {
-        jp.hishidama.xtext.afw.batch_dsl.batchDsl.Package package_ = (jp.hishidama.xtext.afw.batch_dsl.batchDsl.Package)theEObject;
-        T result = casePackage(package_);
+        PackageDeclare packageDeclare = (PackageDeclare)theEObject;
+        T result = casePackageDeclare(packageDeclare);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BatchDslPackage.IMPORT:
+      case BatchDslPackage.IMPORT_DECLARE:
       {
-        Import import_ = (Import)theEObject;
-        T result = caseImport(import_);
+        ImportDeclare importDeclare = (ImportDeclare)theEObject;
+        T result = caseImportDeclare(importDeclare);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -140,33 +135,33 @@ public class BatchDslSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Package</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Package Declare</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Package</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Package Declare</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casePackage(jp.hishidama.xtext.afw.batch_dsl.batchDsl.Package object)
+  public T casePackageDeclare(PackageDeclare object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Import</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Import Declare</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Import</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Import Declare</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseImport(Import object)
+  public T caseImportDeclare(ImportDeclare object)
   {
     return null;
   }

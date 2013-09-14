@@ -6,7 +6,8 @@ import java.util.Collection;
 
 import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchDsl;
 import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchDslPackage;
-import jp.hishidama.xtext.afw.batch_dsl.batchDsl.Import;
+import jp.hishidama.xtext.afw.batch_dsl.batchDsl.ImportDeclare;
+import jp.hishidama.xtext.afw.batch_dsl.batchDsl.PackageDeclare;
 import jp.hishidama.xtext.afw.batch_dsl.batchDsl.Script;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -48,7 +49,7 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script
    * @generated
    * @ordered
    */
-  protected jp.hishidama.xtext.afw.batch_dsl.batchDsl.Package package_;
+  protected PackageDeclare package_;
 
   /**
    * The cached value of the '{@link #getImports() <em>Imports</em>}' containment reference list.
@@ -58,7 +59,7 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script
    * @generated
    * @ordered
    */
-  protected EList<Import> imports;
+  protected EList<ImportDeclare> imports;
 
   /**
    * The cached value of the '{@link #getList() <em>List</em>}' containment reference list.
@@ -96,7 +97,7 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script
    * <!-- end-user-doc -->
    * @generated
    */
-  public jp.hishidama.xtext.afw.batch_dsl.batchDsl.Package getPackage()
+  public PackageDeclare getPackage()
   {
     return package_;
   }
@@ -106,9 +107,9 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetPackage(jp.hishidama.xtext.afw.batch_dsl.batchDsl.Package newPackage, NotificationChain msgs)
+  public NotificationChain basicSetPackage(PackageDeclare newPackage, NotificationChain msgs)
   {
-    jp.hishidama.xtext.afw.batch_dsl.batchDsl.Package oldPackage = package_;
+    PackageDeclare oldPackage = package_;
     package_ = newPackage;
     if (eNotificationRequired())
     {
@@ -123,7 +124,7 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setPackage(jp.hishidama.xtext.afw.batch_dsl.batchDsl.Package newPackage)
+  public void setPackage(PackageDeclare newPackage)
   {
     if (newPackage != package_)
     {
@@ -144,11 +145,11 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Import> getImports()
+  public EList<ImportDeclare> getImports()
   {
     if (imports == null)
     {
-      imports = new EObjectContainmentEList<Import>(Import.class, this, BatchDslPackage.SCRIPT__IMPORTS);
+      imports = new EObjectContainmentEList<ImportDeclare>(ImportDeclare.class, this, BatchDslPackage.SCRIPT__IMPORTS);
     }
     return imports;
   }
@@ -219,11 +220,11 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script
     switch (featureID)
     {
       case BatchDslPackage.SCRIPT__PACKAGE:
-        setPackage((jp.hishidama.xtext.afw.batch_dsl.batchDsl.Package)newValue);
+        setPackage((PackageDeclare)newValue);
         return;
       case BatchDslPackage.SCRIPT__IMPORTS:
         getImports().clear();
-        getImports().addAll((Collection<? extends Import>)newValue);
+        getImports().addAll((Collection<? extends ImportDeclare>)newValue);
         return;
       case BatchDslPackage.SCRIPT__LIST:
         getList().clear();
@@ -244,7 +245,7 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script
     switch (featureID)
     {
       case BatchDslPackage.SCRIPT__PACKAGE:
-        setPackage((jp.hishidama.xtext.afw.batch_dsl.batchDsl.Package)null);
+        setPackage((PackageDeclare)null);
         return;
       case BatchDslPackage.SCRIPT__IMPORTS:
         getImports().clear();

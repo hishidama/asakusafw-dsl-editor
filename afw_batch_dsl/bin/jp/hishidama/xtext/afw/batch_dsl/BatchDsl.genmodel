@@ -12,12 +12,12 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BatchDsl.ecore#//Script/imports"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BatchDsl.ecore#//Script/list"/>
     </genClasses>
-    <genClasses ecoreClass="BatchDsl.ecore#//Package">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BatchDsl.ecore#//Package/name"/>
+    <genClasses ecoreClass="BatchDsl.ecore#//PackageDeclare">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BatchDsl.ecore#//PackageDeclare/name"/>
     </genClasses>
-    <genClasses ecoreClass="BatchDsl.ecore#//Import">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BatchDsl.ecore#//Import/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BatchDsl.ecore#//Import/wildcard"/>
+    <genClasses ecoreClass="BatchDsl.ecore#//ImportDeclare">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BatchDsl.ecore#//ImportDeclare/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BatchDsl.ecore#//ImportDeclare/wildcard"/>
     </genClasses>
     <genClasses ecoreClass="BatchDsl.ecore#//BatchDsl">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BatchDsl.ecore#//BatchDsl/comment"/>
@@ -34,6 +34,7 @@
     <genClasses ecoreClass="BatchDsl.ecore#//BatchStatement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BatchDsl.ecore#//BatchStatement/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BatchDsl.ecore#//BatchStatement/jobName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BatchDsl.ecore#//BatchStatement/soon"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BatchDsl.ecore#//BatchStatement/after"/>
     </genClasses>
   </genPackages>

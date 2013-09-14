@@ -3,18 +3,17 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="batchDsl" nsURI="http://www.hishidama.jp/xtext/afw/batch_dsl/BatchDsl"
     nsPrefix="batchDsl">
   <eClassifiers xsi:type="ecore:EClass" name="Script">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="package" eType="#//Package"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="package" eType="#//PackageDeclare"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="imports" upperBound="-1"
-        eType="#//Import" containment="true"/>
+        eType="#//ImportDeclare" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="list" upperBound="-1" eType="#//BatchDsl"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Package">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PackageDeclare">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Import">
+  <eClassifiers xsi:type="ecore:EClass" name="ImportDeclare">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="wildcard" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
@@ -35,6 +34,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="BatchStatement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="jobName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="soon" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="after" unique="false" upperBound="-1"
         eType="#//BatchStatement"/>
   </eClassifiers>

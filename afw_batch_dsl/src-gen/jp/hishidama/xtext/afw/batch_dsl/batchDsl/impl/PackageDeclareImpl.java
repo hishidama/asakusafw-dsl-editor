@@ -2,49 +2,57 @@
  */
 package jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl;
 
-import java.util.Collection;
-
 import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchDslPackage;
+import jp.hishidama.xtext.afw.batch_dsl.batchDsl.PackageDeclare;
 
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Package</b></em>'.
+ * An implementation of the model object '<em><b>Package Declare</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.PackageImpl#getName <em>Name</em>}</li>
+ *   <li>{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.PackageDeclareImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class PackageImpl extends MinimalEObjectImpl.Container implements jp.hishidama.xtext.afw.batch_dsl.batchDsl.Package
+public class PackageDeclareImpl extends MinimalEObjectImpl.Container implements PackageDeclare
 {
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute list.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getName()
    * @generated
    * @ordered
    */
-  protected EList<String> name;
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected PackageImpl()
+  protected PackageDeclareImpl()
   {
     super();
   }
@@ -57,7 +65,7 @@ public class PackageImpl extends MinimalEObjectImpl.Container implements jp.hish
   @Override
   protected EClass eStaticClass()
   {
-    return BatchDslPackage.Literals.PACKAGE;
+    return BatchDslPackage.Literals.PACKAGE_DECLARE;
   }
 
   /**
@@ -65,13 +73,22 @@ public class PackageImpl extends MinimalEObjectImpl.Container implements jp.hish
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getName()
+  public String getName()
   {
-    if (name == null)
-    {
-      name = new EDataTypeEList<String>(String.class, this, BatchDslPackage.PACKAGE__NAME);
-    }
     return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BatchDslPackage.PACKAGE_DECLARE__NAME, oldName, name));
   }
 
   /**
@@ -84,7 +101,7 @@ public class PackageImpl extends MinimalEObjectImpl.Container implements jp.hish
   {
     switch (featureID)
     {
-      case BatchDslPackage.PACKAGE__NAME:
+      case BatchDslPackage.PACKAGE_DECLARE__NAME:
         return getName();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -95,15 +112,13 @@ public class PackageImpl extends MinimalEObjectImpl.Container implements jp.hish
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case BatchDslPackage.PACKAGE__NAME:
-        getName().clear();
-        getName().addAll((Collection<? extends String>)newValue);
+      case BatchDslPackage.PACKAGE_DECLARE__NAME:
+        setName((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -119,8 +134,8 @@ public class PackageImpl extends MinimalEObjectImpl.Container implements jp.hish
   {
     switch (featureID)
     {
-      case BatchDslPackage.PACKAGE__NAME:
-        getName().clear();
+      case BatchDslPackage.PACKAGE_DECLARE__NAME:
+        setName(NAME_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -136,8 +151,8 @@ public class PackageImpl extends MinimalEObjectImpl.Container implements jp.hish
   {
     switch (featureID)
     {
-      case BatchDslPackage.PACKAGE__NAME:
-        return name != null && !name.isEmpty();
+      case BatchDslPackage.PACKAGE_DECLARE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
   }
@@ -159,4 +174,4 @@ public class PackageImpl extends MinimalEObjectImpl.Container implements jp.hish
     return result.toString();
   }
 
-} //PackageImpl
+} //PackageDeclareImpl

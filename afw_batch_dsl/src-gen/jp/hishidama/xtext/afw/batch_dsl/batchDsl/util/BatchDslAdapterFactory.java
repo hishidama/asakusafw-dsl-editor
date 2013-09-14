@@ -2,12 +2,7 @@
  */
 package jp.hishidama.xtext.afw.batch_dsl.batchDsl.util;
 
-import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchDsl;
-import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchDslPackage;
-import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchParameter;
-import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchStatement;
-import jp.hishidama.xtext.afw.batch_dsl.batchDsl.Import;
-import jp.hishidama.xtext.afw.batch_dsl.batchDsl.Script;
+import jp.hishidama.xtext.afw.batch_dsl.batchDsl.*;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -85,14 +80,14 @@ public class BatchDslAdapterFactory extends AdapterFactoryImpl
         return createScriptAdapter();
       }
       @Override
-      public Adapter casePackage(jp.hishidama.xtext.afw.batch_dsl.batchDsl.Package object)
+      public Adapter casePackageDeclare(PackageDeclare object)
       {
-        return createPackageAdapter();
+        return createPackageDeclareAdapter();
       }
       @Override
-      public Adapter caseImport(Import object)
+      public Adapter caseImportDeclare(ImportDeclare object)
       {
-        return createImportAdapter();
+        return createImportDeclareAdapter();
       }
       @Override
       public Adapter caseBatchDsl(BatchDsl object)
@@ -147,31 +142,31 @@ public class BatchDslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.Package <em>Package</em>}'.
+   * Creates a new adapter for an object of class '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.PackageDeclare <em>Package Declare</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.Package
+   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.PackageDeclare
    * @generated
    */
-  public Adapter createPackageAdapter()
+  public Adapter createPackageDeclareAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.Import <em>Import</em>}'.
+   * Creates a new adapter for an object of class '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.ImportDeclare <em>Import Declare</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.Import
+   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.ImportDeclare
    * @generated
    */
-  public Adapter createImportAdapter()
+  public Adapter createImportDeclareAdapter()
   {
     return null;
   }

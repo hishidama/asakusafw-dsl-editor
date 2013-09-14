@@ -103,42 +103,14 @@ public interface BatchDslPackage extends EPackage
   int SCRIPT_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.PackageImpl <em>Package</em>}' class.
+   * The meta object id for the '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.PackageDeclareImpl <em>Package Declare</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.PackageImpl
-   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.BatchDslPackageImpl#getPackage()
+   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.PackageDeclareImpl
+   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.BatchDslPackageImpl#getPackageDeclare()
    * @generated
    */
-  int PACKAGE = 1;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PACKAGE__NAME = 0;
-
-  /**
-   * The number of structural features of the '<em>Package</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PACKAGE_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.ImportImpl <em>Import</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.ImportImpl
-   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.BatchDslPackageImpl#getImport()
-   * @generated
-   */
-  int IMPORT = 2;
+  int PACKAGE_DECLARE = 1;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -147,7 +119,35 @@ public interface BatchDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IMPORT__NAME = 0;
+  int PACKAGE_DECLARE__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Package Declare</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PACKAGE_DECLARE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.ImportDeclareImpl <em>Import Declare</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.ImportDeclareImpl
+   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.BatchDslPackageImpl#getImportDeclare()
+   * @generated
+   */
+  int IMPORT_DECLARE = 2;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMPORT_DECLARE__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Wildcard</b></em>' attribute.
@@ -156,16 +156,16 @@ public interface BatchDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IMPORT__WILDCARD = 1;
+  int IMPORT_DECLARE__WILDCARD = 1;
 
   /**
-   * The number of structural features of the '<em>Import</em>' class.
+   * The number of structural features of the '<em>Import Declare</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int IMPORT_FEATURE_COUNT = 2;
+  int IMPORT_DECLARE_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.BatchDslImpl <em>Batch Dsl</em>}' class.
@@ -306,13 +306,22 @@ public interface BatchDslPackage extends EPackage
   int BATCH_STATEMENT__JOB_NAME = 1;
 
   /**
+   * The feature id for the '<em><b>Soon</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BATCH_STATEMENT__SOON = 2;
+
+  /**
    * The feature id for the '<em><b>After</b></em>' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BATCH_STATEMENT__AFTER = 2;
+  int BATCH_STATEMENT__AFTER = 3;
 
   /**
    * The number of structural features of the '<em>Batch Statement</em>' class.
@@ -321,7 +330,7 @@ public interface BatchDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BATCH_STATEMENT_FEATURE_COUNT = 3;
+  int BATCH_STATEMENT_FEATURE_COUNT = 4;
 
 
   /**
@@ -368,57 +377,57 @@ public interface BatchDslPackage extends EPackage
   EReference getScript_List();
 
   /**
-   * Returns the meta object for class '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.Package <em>Package</em>}'.
+   * Returns the meta object for class '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.PackageDeclare <em>Package Declare</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Package</em>'.
-   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.Package
+   * @return the meta object for class '<em>Package Declare</em>'.
+   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.PackageDeclare
    * @generated
    */
-  EClass getPackage();
+  EClass getPackageDeclare();
 
   /**
-   * Returns the meta object for the attribute list '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.Package#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Name</em>'.
-   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.Package#getName()
-   * @see #getPackage()
-   * @generated
-   */
-  EAttribute getPackage_Name();
-
-  /**
-   * Returns the meta object for class '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.Import <em>Import</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Import</em>'.
-   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.Import
-   * @generated
-   */
-  EClass getImport();
-
-  /**
-   * Returns the meta object for the attribute '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.Import#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.PackageDeclare#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.Import#getName()
-   * @see #getImport()
+   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.PackageDeclare#getName()
+   * @see #getPackageDeclare()
    * @generated
    */
-  EAttribute getImport_Name();
+  EAttribute getPackageDeclare_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.Import#isWildcard <em>Wildcard</em>}'.
+   * Returns the meta object for class '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.ImportDeclare <em>Import Declare</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Import Declare</em>'.
+   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.ImportDeclare
+   * @generated
+   */
+  EClass getImportDeclare();
+
+  /**
+   * Returns the meta object for the attribute '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.ImportDeclare#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.ImportDeclare#getName()
+   * @see #getImportDeclare()
+   * @generated
+   */
+  EAttribute getImportDeclare_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.ImportDeclare#isWildcard <em>Wildcard</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Wildcard</em>'.
-   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.Import#isWildcard()
-   * @see #getImport()
+   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.ImportDeclare#isWildcard()
+   * @see #getImportDeclare()
    * @generated
    */
-  EAttribute getImport_Wildcard();
+  EAttribute getImportDeclare_Wildcard();
 
   /**
    * Returns the meta object for class '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchDsl <em>Batch Dsl</em>}'.
@@ -561,6 +570,17 @@ public interface BatchDslPackage extends EPackage
   EAttribute getBatchStatement_JobName();
 
   /**
+   * Returns the meta object for the attribute '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchStatement#isSoon <em>Soon</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Soon</em>'.
+   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchStatement#isSoon()
+   * @see #getBatchStatement()
+   * @generated
+   */
+  EAttribute getBatchStatement_Soon();
+
+  /**
    * Returns the meta object for the reference list '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchStatement#getAfter <em>After</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -629,32 +649,14 @@ public interface BatchDslPackage extends EPackage
     EReference SCRIPT__LIST = eINSTANCE.getScript_List();
 
     /**
-     * The meta object literal for the '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.PackageImpl <em>Package</em>}' class.
+     * The meta object literal for the '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.PackageDeclareImpl <em>Package Declare</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.PackageImpl
-     * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.BatchDslPackageImpl#getPackage()
+     * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.PackageDeclareImpl
+     * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.BatchDslPackageImpl#getPackageDeclare()
      * @generated
      */
-    EClass PACKAGE = eINSTANCE.getPackage();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute PACKAGE__NAME = eINSTANCE.getPackage_Name();
-
-    /**
-     * The meta object literal for the '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.ImportImpl <em>Import</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.ImportImpl
-     * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.BatchDslPackageImpl#getImport()
-     * @generated
-     */
-    EClass IMPORT = eINSTANCE.getImport();
+    EClass PACKAGE_DECLARE = eINSTANCE.getPackageDeclare();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -662,7 +664,25 @@ public interface BatchDslPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute IMPORT__NAME = eINSTANCE.getImport_Name();
+    EAttribute PACKAGE_DECLARE__NAME = eINSTANCE.getPackageDeclare_Name();
+
+    /**
+     * The meta object literal for the '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.ImportDeclareImpl <em>Import Declare</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.ImportDeclareImpl
+     * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.BatchDslPackageImpl#getImportDeclare()
+     * @generated
+     */
+    EClass IMPORT_DECLARE = eINSTANCE.getImportDeclare();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IMPORT_DECLARE__NAME = eINSTANCE.getImportDeclare_Name();
 
     /**
      * The meta object literal for the '<em><b>Wildcard</b></em>' attribute feature.
@@ -670,7 +690,7 @@ public interface BatchDslPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute IMPORT__WILDCARD = eINSTANCE.getImport_Wildcard();
+    EAttribute IMPORT_DECLARE__WILDCARD = eINSTANCE.getImportDeclare_Wildcard();
 
     /**
      * The meta object literal for the '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.BatchDslImpl <em>Batch Dsl</em>}' class.
@@ -781,6 +801,14 @@ public interface BatchDslPackage extends EPackage
      * @generated
      */
     EAttribute BATCH_STATEMENT__JOB_NAME = eINSTANCE.getBatchStatement_JobName();
+
+    /**
+     * The meta object literal for the '<em><b>Soon</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BATCH_STATEMENT__SOON = eINSTANCE.getBatchStatement_Soon();
 
     /**
      * The meta object literal for the '<em><b>After</b></em>' reference list feature.

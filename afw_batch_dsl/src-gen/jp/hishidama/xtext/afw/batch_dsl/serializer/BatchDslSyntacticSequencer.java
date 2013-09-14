@@ -24,8 +24,8 @@ public class BatchDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_BatchParameter_CommaKeyword_6_0_q;
 	protected AbstractElementAlias match_BatchParameter___KeyKeyword_3_0_EqualsSignKeyword_3_1__q;
 	protected AbstractElementAlias match_BatchStatement___FullStopKeyword_3_1_or_SemicolonKeyword_3_0__q;
-	protected AbstractElementAlias match_Import_SemicolonKeyword_3_q;
-	protected AbstractElementAlias match_Package_SemicolonKeyword_3_q;
+	protected AbstractElementAlias match_ImportDeclare_SemicolonKeyword_3_q;
+	protected AbstractElementAlias match_PackageDeclare_SemicolonKeyword_2_q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
@@ -35,8 +35,8 @@ public class BatchDslSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_BatchParameter_CommaKeyword_6_0_q = new TokenAlias(false, true, grammarAccess.getBatchParameterAccess().getCommaKeyword_6_0());
 		match_BatchParameter___KeyKeyword_3_0_EqualsSignKeyword_3_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getBatchParameterAccess().getKeyKeyword_3_0()), new TokenAlias(false, false, grammarAccess.getBatchParameterAccess().getEqualsSignKeyword_3_1()));
 		match_BatchStatement___FullStopKeyword_3_1_or_SemicolonKeyword_3_0__q = new AlternativeAlias(false, true, new TokenAlias(false, false, grammarAccess.getBatchStatementAccess().getFullStopKeyword_3_1()), new TokenAlias(false, false, grammarAccess.getBatchStatementAccess().getSemicolonKeyword_3_0()));
-		match_Import_SemicolonKeyword_3_q = new TokenAlias(false, true, grammarAccess.getImportAccess().getSemicolonKeyword_3());
-		match_Package_SemicolonKeyword_3_q = new TokenAlias(false, true, grammarAccess.getPackageAccess().getSemicolonKeyword_3());
+		match_ImportDeclare_SemicolonKeyword_3_q = new TokenAlias(false, true, grammarAccess.getImportDeclareAccess().getSemicolonKeyword_3());
+		match_PackageDeclare_SemicolonKeyword_2_q = new TokenAlias(false, true, grammarAccess.getPackageDeclareAccess().getSemicolonKeyword_2());
 	}
 	
 	@Override
@@ -61,10 +61,10 @@ public class BatchDslSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_BatchParameter___KeyKeyword_3_0_EqualsSignKeyword_3_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_BatchStatement___FullStopKeyword_3_1_or_SemicolonKeyword_3_0__q.equals(syntax))
 				emit_BatchStatement___FullStopKeyword_3_1_or_SemicolonKeyword_3_0__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Import_SemicolonKeyword_3_q.equals(syntax))
-				emit_Import_SemicolonKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Package_SemicolonKeyword_3_q.equals(syntax))
-				emit_Package_SemicolonKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_ImportDeclare_SemicolonKeyword_3_q.equals(syntax))
+				emit_ImportDeclare_SemicolonKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_PackageDeclare_SemicolonKeyword_2_q.equals(syntax))
+				emit_PackageDeclare_SemicolonKeyword_2_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
@@ -113,7 +113,7 @@ public class BatchDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     ';'?
 	 */
-	protected void emit_Import_SemicolonKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_ImportDeclare_SemicolonKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -121,7 +121,7 @@ public class BatchDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     ';'?
 	 */
-	protected void emit_Package_SemicolonKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_PackageDeclare_SemicolonKeyword_2_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

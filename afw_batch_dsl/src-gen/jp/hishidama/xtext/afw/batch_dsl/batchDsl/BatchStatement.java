@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchStatement#getName <em>Name</em>}</li>
  *   <li>{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchStatement#getJobName <em>Job Name</em>}</li>
+ *   <li>{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchStatement#isSoon <em>Soon</em>}</li>
  *   <li>{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchStatement#getAfter <em>After</em>}</li>
  * </ul>
  * </p>
@@ -77,6 +78,32 @@ public interface BatchStatement extends EObject
    * @generated
    */
   void setJobName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Soon</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Soon</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Soon</em>' attribute.
+   * @see #setSoon(boolean)
+   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchDslPackage#getBatchStatement_Soon()
+   * @model
+   * @generated
+   */
+  boolean isSoon();
+
+  /**
+   * Sets the value of the '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchStatement#isSoon <em>Soon</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Soon</em>' attribute.
+   * @see #isSoon()
+   * @generated
+   */
+  void setSoon(boolean value);
 
   /**
    * Returns the value of the '<em><b>After</b></em>' reference list.

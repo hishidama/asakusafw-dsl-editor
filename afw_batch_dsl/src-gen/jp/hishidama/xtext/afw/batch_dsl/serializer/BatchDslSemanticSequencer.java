@@ -6,17 +6,21 @@ import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchDsl;
 import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchDslPackage;
 import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchParameter;
 import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchStatement;
-import jp.hishidama.xtext.afw.batch_dsl.batchDsl.Import;
+import jp.hishidama.xtext.afw.batch_dsl.batchDsl.ImportDeclare;
+import jp.hishidama.xtext.afw.batch_dsl.batchDsl.PackageDeclare;
 import jp.hishidama.xtext.afw.batch_dsl.batchDsl.Script;
 import jp.hishidama.xtext.afw.batch_dsl.services.BatchDslGrammarAccess;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
+import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.diagnostic.ISemanticSequencerDiagnosticProvider;
 import org.eclipse.xtext.serializer.diagnostic.ISerializationDiagnostic.Acceptor;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.GenericSequencer;
+import org.eclipse.xtext.serializer.sequencer.ISemanticNodeProvider.INodesForEObjectProvider;
 import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
+import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 
 @SuppressWarnings("all")
 public class BatchDslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
@@ -44,15 +48,15 @@ public class BatchDslSemanticSequencer extends AbstractDelegatingSemanticSequenc
 					return; 
 				}
 				else break;
-			case BatchDslPackage.IMPORT:
-				if(context == grammarAccess.getImportRule()) {
-					sequence_Import(context, (Import) semanticObject); 
+			case BatchDslPackage.IMPORT_DECLARE:
+				if(context == grammarAccess.getImportDeclareRule()) {
+					sequence_ImportDeclare(context, (ImportDeclare) semanticObject); 
 					return; 
 				}
 				else break;
-			case BatchDslPackage.PACKAGE:
-				if(context == grammarAccess.getPackageRule()) {
-					sequence_Package(context, (jp.hishidama.xtext.afw.batch_dsl.batchDsl.Package) semanticObject); 
+			case BatchDslPackage.PACKAGE_DECLARE:
+				if(context == grammarAccess.getPackageDeclareRule()) {
+					sequence_PackageDeclare(context, (PackageDeclare) semanticObject); 
 					return; 
 				}
 				else break;
@@ -86,7 +90,7 @@ public class BatchDslSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Constraint:
-	 *     ((name=FQN | (jobName=FQN name=Name)) (after+=[BatchStatement|ID] after+=[BatchStatement|ID]*)?)
+	 *     ((name=FQN | (jobName=FQN name=Name)) (soon?='soon' | (after+=[BatchStatement|ID] after+=[BatchStatement|ID]*)))
 	 */
 	protected void sequence_BatchStatement(EObject context, BatchStatement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -97,23 +101,30 @@ public class BatchDslSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 * Constraint:
 	 *     (name=FQN wildcard?='*'?)
 	 */
-	protected void sequence_Import(EObject context, Import semanticObject) {
+	protected void sequence_ImportDeclare(EObject context, ImportDeclare semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (name+=Name name+=Name*)
+	 *     name=FQN
 	 */
-	protected void sequence_Package(EObject context, jp.hishidama.xtext.afw.batch_dsl.batchDsl.Package semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+	protected void sequence_PackageDeclare(EObject context, PackageDeclare semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, BatchDslPackage.Literals.PACKAGE_DECLARE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BatchDslPackage.Literals.PACKAGE_DECLARE__NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getPackageDeclareAccess().getNameFQNParserRuleCall_1_0(), semanticObject.getName());
+		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (package=Package imports+=Import* list+=BatchDsl*)
+	 *     (package=PackageDeclare imports+=ImportDeclare* list+=BatchDsl*)
 	 */
 	protected void sequence_Script(EObject context, Script semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

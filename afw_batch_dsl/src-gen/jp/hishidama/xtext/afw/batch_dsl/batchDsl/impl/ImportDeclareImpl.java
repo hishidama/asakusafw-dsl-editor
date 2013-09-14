@@ -3,7 +3,7 @@
 package jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl;
 
 import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchDslPackage;
-import jp.hishidama.xtext.afw.batch_dsl.batchDsl.Import;
+import jp.hishidama.xtext.afw.batch_dsl.batchDsl.ImportDeclare;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -14,19 +14,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Import</b></em>'.
+ * An implementation of the model object '<em><b>Import Declare</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.ImportImpl#getName <em>Name</em>}</li>
- *   <li>{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.ImportImpl#isWildcard <em>Wildcard</em>}</li>
+ *   <li>{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.ImportDeclareImpl#getName <em>Name</em>}</li>
+ *   <li>{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.ImportDeclareImpl#isWildcard <em>Wildcard</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ImportImpl extends MinimalEObjectImpl.Container implements Import
+public class ImportDeclareImpl extends MinimalEObjectImpl.Container implements ImportDeclare
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -73,7 +73,7 @@ public class ImportImpl extends MinimalEObjectImpl.Container implements Import
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ImportImpl()
+  protected ImportDeclareImpl()
   {
     super();
   }
@@ -86,7 +86,7 @@ public class ImportImpl extends MinimalEObjectImpl.Container implements Import
   @Override
   protected EClass eStaticClass()
   {
-    return BatchDslPackage.Literals.IMPORT;
+    return BatchDslPackage.Literals.IMPORT_DECLARE;
   }
 
   /**
@@ -109,7 +109,7 @@ public class ImportImpl extends MinimalEObjectImpl.Container implements Import
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BatchDslPackage.IMPORT__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, BatchDslPackage.IMPORT_DECLARE__NAME, oldName, name));
   }
 
   /**
@@ -132,7 +132,7 @@ public class ImportImpl extends MinimalEObjectImpl.Container implements Import
     boolean oldWildcard = wildcard;
     wildcard = newWildcard;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BatchDslPackage.IMPORT__WILDCARD, oldWildcard, wildcard));
+      eNotify(new ENotificationImpl(this, Notification.SET, BatchDslPackage.IMPORT_DECLARE__WILDCARD, oldWildcard, wildcard));
   }
 
   /**
@@ -145,9 +145,9 @@ public class ImportImpl extends MinimalEObjectImpl.Container implements Import
   {
     switch (featureID)
     {
-      case BatchDslPackage.IMPORT__NAME:
+      case BatchDslPackage.IMPORT_DECLARE__NAME:
         return getName();
-      case BatchDslPackage.IMPORT__WILDCARD:
+      case BatchDslPackage.IMPORT_DECLARE__WILDCARD:
         return isWildcard();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -163,10 +163,10 @@ public class ImportImpl extends MinimalEObjectImpl.Container implements Import
   {
     switch (featureID)
     {
-      case BatchDslPackage.IMPORT__NAME:
+      case BatchDslPackage.IMPORT_DECLARE__NAME:
         setName((String)newValue);
         return;
-      case BatchDslPackage.IMPORT__WILDCARD:
+      case BatchDslPackage.IMPORT_DECLARE__WILDCARD:
         setWildcard((Boolean)newValue);
         return;
     }
@@ -183,10 +183,10 @@ public class ImportImpl extends MinimalEObjectImpl.Container implements Import
   {
     switch (featureID)
     {
-      case BatchDslPackage.IMPORT__NAME:
+      case BatchDslPackage.IMPORT_DECLARE__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case BatchDslPackage.IMPORT__WILDCARD:
+      case BatchDslPackage.IMPORT_DECLARE__WILDCARD:
         setWildcard(WILDCARD_EDEFAULT);
         return;
     }
@@ -203,9 +203,9 @@ public class ImportImpl extends MinimalEObjectImpl.Container implements Import
   {
     switch (featureID)
     {
-      case BatchDslPackage.IMPORT__NAME:
+      case BatchDslPackage.IMPORT_DECLARE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case BatchDslPackage.IMPORT__WILDCARD:
+      case BatchDslPackage.IMPORT_DECLARE__WILDCARD:
         return wildcard != WILDCARD_EDEFAULT;
     }
     return super.eIsSet(featureID);
@@ -230,4 +230,4 @@ public class ImportImpl extends MinimalEObjectImpl.Container implements Import
     return result.toString();
   }
 
-} //ImportImpl
+} //ImportDeclareImpl

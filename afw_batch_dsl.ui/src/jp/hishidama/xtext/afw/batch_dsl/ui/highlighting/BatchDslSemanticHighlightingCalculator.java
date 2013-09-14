@@ -6,7 +6,7 @@ import java.util.List;
 import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchDslPackage;
 import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchParameter;
 import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchStatement;
-import jp.hishidama.xtext.afw.batch_dsl.batchDsl.Import;
+import jp.hishidama.xtext.afw.batch_dsl.batchDsl.ImportDeclare;
 import jp.hishidama.xtext.afw.batch_dsl.batchDsl.util.BatchDslSwitch;
 
 import org.eclipse.emf.ecore.EObject;
@@ -41,8 +41,9 @@ public class BatchDslSemanticHighlightingCalculator implements ISemanticHighligh
 		}
 
 		@Override
-		public Void caseImport(Import object) {
-			List<INode> list = NodeModelUtils.findNodesForFeature(object, BatchDslPackage.Literals.IMPORT__NAME);
+		public Void caseImportDeclare(ImportDeclare object) {
+			List<INode> list = NodeModelUtils
+					.findNodesForFeature(object, BatchDslPackage.Literals.IMPORT_DECLARE__NAME);
 			for (INode n : list) {
 				acceptor.addPosition(n.getOffset(), n.getLength(), DefaultHighlightingConfiguration.DEFAULT_ID);
 			}

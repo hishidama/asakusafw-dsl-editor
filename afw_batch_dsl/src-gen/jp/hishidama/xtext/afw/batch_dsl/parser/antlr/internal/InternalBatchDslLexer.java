@@ -78,10 +78,10 @@ public class InternalBatchDslLexer extends Lexer {
         try {
             int _type = T__10;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:12:7: ( '.' )
-            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:12:9: '.'
+            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:12:7: ( ';' )
+            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:12:9: ';'
             {
-            match('.'); 
+            match(';'); 
 
             }
 
@@ -98,10 +98,11 @@ public class InternalBatchDslLexer extends Lexer {
         try {
             int _type = T__11;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:13:7: ( ';' )
-            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:13:9: ';'
+            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:13:7: ( 'import' )
+            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:13:9: 'import'
             {
-            match(';'); 
+            match("import"); 
+
 
             }
 
@@ -118,11 +119,10 @@ public class InternalBatchDslLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:14:7: ( 'import' )
-            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:14:9: 'import'
+            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:14:7: ( '.' )
+            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:14:9: '.'
             {
-            match("import"); 
-
+            match('.'); 
 
             }
 
@@ -468,10 +468,10 @@ public class InternalBatchDslLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:776:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:776:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:765:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:765:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:776:11: ( '^' )?
+            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:765:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -480,7 +480,7 @@ public class InternalBatchDslLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:776:11: '^'
+                    // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:765:11: '^'
                     {
                     match('^'); 
 
@@ -498,7 +498,7 @@ public class InternalBatchDslLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:776:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:765:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -547,11 +547,11 @@ public class InternalBatchDslLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:778:13: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' )
-            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:778:15: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:767:13: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' )
+            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:767:15: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
             {
             match('\"'); 
-            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:778:19: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:767:19: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
             loop3:
             do {
                 int alt3=3;
@@ -567,7 +567,7 @@ public class InternalBatchDslLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:778:20: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+            	    // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:767:20: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
             	    {
             	    match('\\'); 
             	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -583,7 +583,7 @@ public class InternalBatchDslLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:778:65: ~ ( ( '\\\\' | '\"' ) )
+            	    // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:767:65: ~ ( ( '\\\\' | '\"' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -620,12 +620,12 @@ public class InternalBatchDslLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:780:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:780:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:769:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:769:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:780:24: ( options {greedy=false; } : . )*
+            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:769:24: ( options {greedy=false; } : . )*
             loop4:
             do {
                 int alt4=2;
@@ -650,7 +650,7 @@ public class InternalBatchDslLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:780:52: .
+            	    // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:769:52: .
             	    {
             	    matchAny(); 
 
@@ -680,10 +680,10 @@ public class InternalBatchDslLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:782:17: ( ( '//' | '--' ) (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:782:19: ( '//' | '--' ) (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:771:17: ( ( '//' | '--' ) (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:771:19: ( '//' | '--' ) (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
-            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:782:19: ( '//' | '--' )
+            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:771:19: ( '//' | '--' )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -701,7 +701,7 @@ public class InternalBatchDslLexer extends Lexer {
             }
             switch (alt5) {
                 case 1 :
-                    // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:782:20: '//'
+                    // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:771:20: '//'
                     {
                     match("//"); 
 
@@ -709,7 +709,7 @@ public class InternalBatchDslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:782:25: '--'
+                    // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:771:25: '--'
                     {
                     match("--"); 
 
@@ -719,7 +719,7 @@ public class InternalBatchDslLexer extends Lexer {
 
             }
 
-            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:782:31: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:771:31: (~ ( ( '\\n' | '\\r' ) ) )*
             loop6:
             do {
                 int alt6=2;
@@ -732,7 +732,7 @@ public class InternalBatchDslLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:782:31: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:771:31: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -752,7 +752,7 @@ public class InternalBatchDslLexer extends Lexer {
                 }
             } while (true);
 
-            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:782:47: ( ( '\\r' )? '\\n' )?
+            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:771:47: ( ( '\\r' )? '\\n' )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -761,9 +761,9 @@ public class InternalBatchDslLexer extends Lexer {
             }
             switch (alt8) {
                 case 1 :
-                    // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:782:48: ( '\\r' )? '\\n'
+                    // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:771:48: ( '\\r' )? '\\n'
                     {
-                    // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:782:48: ( '\\r' )?
+                    // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:771:48: ( '\\r' )?
                     int alt7=2;
                     int LA7_0 = input.LA(1);
 
@@ -772,7 +772,7 @@ public class InternalBatchDslLexer extends Lexer {
                     }
                     switch (alt7) {
                         case 1 :
-                            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:782:48: '\\r'
+                            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:771:48: '\\r'
                             {
                             match('\r'); 
 
@@ -804,10 +804,10 @@ public class InternalBatchDslLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:784:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:784:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:773:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:773:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:784:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../afw_batch_dsl/src-gen/jp/hishidama/xtext/afw/batch_dsl/parser/antlr/internal/InternalBatchDsl.g:773:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt9=0;
             loop9:
             do {
@@ -1044,7 +1044,7 @@ public class InternalBatchDslLexer extends Lexer {
 
     protected DFA10 dfa10 = new DFA10(this);
     static final String DFA10_eotS =
-        "\1\uffff\1\22\2\uffff\1\22\1\uffff\1\22\4\uffff\1\22\2\uffff\1"+
+        "\1\uffff\1\22\1\uffff\1\22\2\uffff\1\22\4\uffff\1\22\2\uffff\1"+
         "\22\1\uffff\2\22\5\uffff\6\22\1\50\2\22\1\uffff\4\22\1\57\1\22\1"+
         "\61\1\uffff\6\22\1\uffff\1\22\1\uffff\1\22\1\72\3\22\1\76\1\22\1"+
         "\100\1\uffff\2\22\1\103\1\uffff\1\22\1\uffff\1\105\1\106\1\uffff"+
@@ -1052,7 +1052,7 @@ public class InternalBatchDslLexer extends Lexer {
     static final String DFA10_eofS =
         "\111\uffff";
     static final String DFA10_minS =
-        "\1\11\1\141\2\uffff\1\155\1\uffff\1\141\4\uffff\1\145\2\uffff\1"+
+        "\1\11\1\141\1\uffff\1\155\2\uffff\1\141\4\uffff\1\145\2\uffff\1"+
         "\145\1\uffff\1\146\1\157\2\uffff\1\52\2\uffff\1\143\1\160\1\164"+
         "\1\171\1\161\1\156\1\60\1\164\1\157\1\uffff\1\153\1\164\1\157\1"+
         "\143\1\60\1\165\1\60\1\uffff\1\145\1\156\1\141\1\145\1\162\1\150"+
@@ -1060,7 +1060,7 @@ public class InternalBatchDslLexer extends Lexer {
         "\60\1\uffff\1\145\1\156\1\60\1\uffff\1\145\1\uffff\2\60\1\uffff"+
         "\1\144\2\uffff\1\60\1\uffff";
     static final String DFA10_maxS =
-        "\1\175\1\141\2\uffff\1\155\1\uffff\1\141\4\uffff\1\145\2\uffff"+
+        "\1\175\1\141\1\uffff\1\155\2\uffff\1\141\4\uffff\1\145\2\uffff"+
         "\1\165\1\uffff\1\163\1\157\2\uffff\1\57\2\uffff\1\164\1\160\1\164"+
         "\1\171\1\161\1\156\1\172\1\164\1\157\1\uffff\1\153\1\164\1\157\1"+
         "\143\1\172\1\165\1\172\1\uffff\1\145\1\156\1\141\1\145\1\162\1\150"+
@@ -1068,21 +1068,21 @@ public class InternalBatchDslLexer extends Lexer {
         "\1\172\1\uffff\1\145\1\156\1\172\1\uffff\1\145\1\uffff\2\172\1\uffff"+
         "\1\144\2\uffff\1\172\1\uffff";
     static final String DFA10_acceptS =
-        "\2\uffff\1\2\1\3\1\uffff\1\5\1\uffff\1\7\1\10\1\11\1\12\1\uffff"+
+        "\2\uffff\1\2\1\uffff\1\4\1\5\1\uffff\1\7\1\10\1\11\1\12\1\uffff"+
         "\1\14\1\15\1\uffff\1\20\2\uffff\1\25\1\26\1\uffff\1\30\1\31\11\uffff"+
         "\1\27\7\uffff\1\22\6\uffff\1\13\1\uffff\1\21\10\uffff\1\23\3\uffff"+
-        "\1\6\1\uffff\1\24\2\uffff\1\4\1\uffff\1\1\1\16\1\uffff\1\17";
+        "\1\6\1\uffff\1\24\2\uffff\1\3\1\uffff\1\1\1\16\1\uffff\1\17";
     static final String DFA10_specialS =
         "\111\uffff}>";
     static final String[] DFA10_transitionS = {
             "\2\26\2\uffff\1\26\22\uffff\1\26\1\uffff\1\23\5\uffff\1\12"+
-            "\1\17\1\5\1\uffff\1\15\1\25\1\2\1\24\13\uffff\1\3\1\uffff\1"+
+            "\1\17\1\5\1\uffff\1\15\1\25\1\4\1\24\13\uffff\1\2\1\uffff\1"+
             "\14\2\uffff\1\11\32\22\3\uffff\2\22\1\uffff\1\20\1\6\6\22\1"+
-            "\4\1\22\1\13\4\22\1\1\1\22\1\16\1\21\7\22\1\7\1\uffff\1\10",
+            "\3\1\22\1\13\4\22\1\1\1\22\1\16\1\21\7\22\1\7\1\uffff\1\10",
             "\1\27",
             "",
-            "",
             "\1\30",
+            "",
             "",
             "\1\31",
             "",

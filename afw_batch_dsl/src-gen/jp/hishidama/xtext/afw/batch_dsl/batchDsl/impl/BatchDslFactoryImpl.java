@@ -2,13 +2,7 @@
  */
 package jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl;
 
-import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchDsl;
-import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchDslFactory;
-import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchDslPackage;
-import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchParameter;
-import jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchStatement;
-import jp.hishidama.xtext.afw.batch_dsl.batchDsl.Import;
-import jp.hishidama.xtext.afw.batch_dsl.batchDsl.Script;
+import jp.hishidama.xtext.afw.batch_dsl.batchDsl.*;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -71,8 +65,8 @@ public class BatchDslFactoryImpl extends EFactoryImpl implements BatchDslFactory
     switch (eClass.getClassifierID())
     {
       case BatchDslPackage.SCRIPT: return createScript();
-      case BatchDslPackage.PACKAGE: return createPackage();
-      case BatchDslPackage.IMPORT: return createImport();
+      case BatchDslPackage.PACKAGE_DECLARE: return createPackageDeclare();
+      case BatchDslPackage.IMPORT_DECLARE: return createImportDeclare();
       case BatchDslPackage.BATCH_DSL: return createBatchDsl();
       case BatchDslPackage.BATCH_PARAMETER: return createBatchParameter();
       case BatchDslPackage.BATCH_STATEMENT: return createBatchStatement();
@@ -97,10 +91,10 @@ public class BatchDslFactoryImpl extends EFactoryImpl implements BatchDslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public jp.hishidama.xtext.afw.batch_dsl.batchDsl.Package createPackage()
+  public PackageDeclare createPackageDeclare()
   {
-    PackageImpl package_ = new PackageImpl();
-    return package_;
+    PackageDeclareImpl packageDeclare = new PackageDeclareImpl();
+    return packageDeclare;
   }
 
   /**
@@ -108,10 +102,10 @@ public class BatchDslFactoryImpl extends EFactoryImpl implements BatchDslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Import createImport()
+  public ImportDeclare createImportDeclare()
   {
-    ImportImpl import_ = new ImportImpl();
-    return import_;
+    ImportDeclareImpl importDeclare = new ImportDeclareImpl();
+    return importDeclare;
   }
 
   /**

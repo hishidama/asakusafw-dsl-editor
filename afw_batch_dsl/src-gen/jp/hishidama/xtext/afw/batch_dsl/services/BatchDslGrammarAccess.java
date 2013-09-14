@@ -21,31 +21,31 @@ public class BatchDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Script");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cPackageAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cPackagePackageParserRuleCall_0_0 = (RuleCall)cPackageAssignment_0.eContents().get(0);
+		private final RuleCall cPackagePackageDeclareParserRuleCall_0_0 = (RuleCall)cPackageAssignment_0.eContents().get(0);
 		private final Assignment cImportsAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cImportsImportParserRuleCall_1_0 = (RuleCall)cImportsAssignment_1.eContents().get(0);
+		private final RuleCall cImportsImportDeclareParserRuleCall_1_0 = (RuleCall)cImportsAssignment_1.eContents().get(0);
 		private final Assignment cListAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cListBatchDslParserRuleCall_2_0 = (RuleCall)cListAssignment_2.eContents().get(0);
 		
 		//Script:
 		//
-		//	package=Package imports+=Import* list+=BatchDsl*;
+		//	package=PackageDeclare imports+=ImportDeclare* list+=BatchDsl*;
 		public ParserRule getRule() { return rule; }
 
-		//package=Package imports+=Import* list+=BatchDsl*
+		//package=PackageDeclare imports+=ImportDeclare* list+=BatchDsl*
 		public Group getGroup() { return cGroup; }
 
-		//package=Package
+		//package=PackageDeclare
 		public Assignment getPackageAssignment_0() { return cPackageAssignment_0; }
 
-		//Package
-		public RuleCall getPackagePackageParserRuleCall_0_0() { return cPackagePackageParserRuleCall_0_0; }
+		//PackageDeclare
+		public RuleCall getPackagePackageDeclareParserRuleCall_0_0() { return cPackagePackageDeclareParserRuleCall_0_0; }
 
-		//imports+=Import*
+		//imports+=ImportDeclare*
 		public Assignment getImportsAssignment_1() { return cImportsAssignment_1; }
 
-		//Import
-		public RuleCall getImportsImportParserRuleCall_1_0() { return cImportsImportParserRuleCall_1_0; }
+		//ImportDeclare
+		public RuleCall getImportsImportDeclareParserRuleCall_1_0() { return cImportsImportDeclareParserRuleCall_1_0; }
 
 		//list+=BatchDsl*
 		public Assignment getListAssignment_2() { return cListAssignment_2; }
@@ -54,53 +54,37 @@ public class BatchDslGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getListBatchDslParserRuleCall_2_0() { return cListBatchDslParserRuleCall_2_0; }
 	}
 
-	public class PackageElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Package");
+	public class PackageDeclareElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "PackageDeclare");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cPackageKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameNameParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cFullStopKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cNameAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cNameNameParserRuleCall_2_1_0 = (RuleCall)cNameAssignment_2_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final RuleCall cNameFQNParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
-		//Package:
+		//PackageDeclare:
 		//
-		//	"package" name+=Name ("." name+=Name)* ";"?;
+		//	"package" name=FQN ";"?;
 		public ParserRule getRule() { return rule; }
 
-		//"package" name+=Name ("." name+=Name)* ";"?
+		//"package" name=FQN ";"?
 		public Group getGroup() { return cGroup; }
 
 		//"package"
 		public Keyword getPackageKeyword_0() { return cPackageKeyword_0; }
 
-		//name+=Name
+		//name=FQN
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 
-		//Name
-		public RuleCall getNameNameParserRuleCall_1_0() { return cNameNameParserRuleCall_1_0; }
-
-		//("." name+=Name)*
-		public Group getGroup_2() { return cGroup_2; }
-
-		//"."
-		public Keyword getFullStopKeyword_2_0() { return cFullStopKeyword_2_0; }
-
-		//name+=Name
-		public Assignment getNameAssignment_2_1() { return cNameAssignment_2_1; }
-
-		//Name
-		public RuleCall getNameNameParserRuleCall_2_1_0() { return cNameNameParserRuleCall_2_1_0; }
+		//FQN
+		public RuleCall getNameFQNParserRuleCall_1_0() { return cNameFQNParserRuleCall_1_0; }
 
 		//";"?
-		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
 	}
 
-	public class ImportElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Import");
+	public class ImportDeclareElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ImportDeclare");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cImportKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -111,7 +95,7 @@ public class BatchDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cWildcardAsteriskKeyword_2_1_0 = (Keyword)cWildcardAssignment_2_1.eContents().get(0);
 		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
-		//Import:
+		//ImportDeclare:
 		//
 		//	"import" name=FQN ("." wildcard?="*")? ";"?;
 		public ParserRule getRule() { return rule; }
@@ -316,7 +300,8 @@ public class BatchDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_1_1_2 = (Assignment)cGroup_1_1.eContents().get(2);
 		private final RuleCall cNameNameParserRuleCall_1_1_2_0 = (RuleCall)cNameAssignment_1_1_2.eContents().get(0);
 		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
-		private final Keyword cSoonKeyword_2_0 = (Keyword)cAlternatives_2.eContents().get(0);
+		private final Assignment cSoonAssignment_2_0 = (Assignment)cAlternatives_2.eContents().get(0);
+		private final Keyword cSoonSoonKeyword_2_0_0 = (Keyword)cSoonAssignment_2_0.eContents().get(0);
 		private final Group cGroup_2_1 = (Group)cAlternatives_2.eContents().get(1);
 		private final Keyword cAfterKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
 		private final Assignment cAfterAssignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
@@ -333,14 +318,14 @@ public class BatchDslGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//BatchStatement:
 		//
-		//	"run" (name=FQN | jobName=FQN "as" name=Name) ("soon" | "after" after+=[BatchStatement] (","
+		//	"run" (name=FQN | jobName=FQN "as" name=Name) (soon?="soon" | "after" after+=[BatchStatement] (","
 		//
 		//	after+=[BatchStatement])*) (";" | ".")?;
 		public ParserRule getRule() { return rule; }
 
-		//"run" (name=FQN | jobName=FQN "as" name=Name) ("soon" | "after" after+=[BatchStatement] ("," after+=[BatchStatement])*)
+		//"run" (name=FQN | jobName=FQN "as" name=Name) (soon?="soon" | "after" after+=[BatchStatement] (","
 		//
-		//(";" | ".")?
+		//after+=[BatchStatement])*) (";" | ".")?
 		public Group getGroup() { return cGroup; }
 
 		//"run"
@@ -373,11 +358,14 @@ public class BatchDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Name
 		public RuleCall getNameNameParserRuleCall_1_1_2_0() { return cNameNameParserRuleCall_1_1_2_0; }
 
-		//"soon" | "after" after+=[BatchStatement] ("," after+=[BatchStatement])*
+		//soon?="soon" | "after" after+=[BatchStatement] ("," after+=[BatchStatement])*
 		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 
+		//soon?="soon"
+		public Assignment getSoonAssignment_2_0() { return cSoonAssignment_2_0; }
+
 		//"soon"
-		public Keyword getSoonKeyword_2_0() { return cSoonKeyword_2_0; }
+		public Keyword getSoonSoonKeyword_2_0_0() { return cSoonSoonKeyword_2_0_0; }
 
 		//"after" after+=[BatchStatement] ("," after+=[BatchStatement])*
 		public Group getGroup_2_1() { return cGroup_2_1; }
@@ -499,8 +487,8 @@ public class BatchDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
 	private ScriptElements pScript;
-	private PackageElements pPackage;
-	private ImportElements pImport;
+	private PackageDeclareElements pPackageDeclare;
+	private ImportDeclareElements pImportDeclare;
 	private BatchDslElements pBatchDsl;
 	private BatchParameterElements pBatchParameter;
 	private BatchStatementElements pBatchStatement;
@@ -544,7 +532,7 @@ public class BatchDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//Script:
 	//
-	//	package=Package imports+=Import* list+=BatchDsl*;
+	//	package=PackageDeclare imports+=ImportDeclare* list+=BatchDsl*;
 	public ScriptElements getScriptAccess() {
 		return (pScript != null) ? pScript : (pScript = new ScriptElements());
 	}
@@ -553,26 +541,26 @@ public class BatchDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getScriptAccess().getRule();
 	}
 
-	//Package:
+	//PackageDeclare:
 	//
-	//	"package" name+=Name ("." name+=Name)* ";"?;
-	public PackageElements getPackageAccess() {
-		return (pPackage != null) ? pPackage : (pPackage = new PackageElements());
+	//	"package" name=FQN ";"?;
+	public PackageDeclareElements getPackageDeclareAccess() {
+		return (pPackageDeclare != null) ? pPackageDeclare : (pPackageDeclare = new PackageDeclareElements());
 	}
 	
-	public ParserRule getPackageRule() {
-		return getPackageAccess().getRule();
+	public ParserRule getPackageDeclareRule() {
+		return getPackageDeclareAccess().getRule();
 	}
 
-	//Import:
+	//ImportDeclare:
 	//
 	//	"import" name=FQN ("." wildcard?="*")? ";"?;
-	public ImportElements getImportAccess() {
-		return (pImport != null) ? pImport : (pImport = new ImportElements());
+	public ImportDeclareElements getImportDeclareAccess() {
+		return (pImportDeclare != null) ? pImportDeclare : (pImportDeclare = new ImportDeclareElements());
 	}
 	
-	public ParserRule getImportRule() {
-		return getImportAccess().getRule();
+	public ParserRule getImportDeclareRule() {
+		return getImportDeclareAccess().getRule();
 	}
 
 	//BatchDsl:
@@ -601,7 +589,7 @@ public class BatchDslGrammarAccess extends AbstractGrammarElementFinder {
 
 	//BatchStatement:
 	//
-	//	"run" (name=FQN | jobName=FQN "as" name=Name) ("soon" | "after" after+=[BatchStatement] (","
+	//	"run" (name=FQN | jobName=FQN "as" name=Name) (soon?="soon" | "after" after+=[BatchStatement] (","
 	//
 	//	after+=[BatchStatement])*) (";" | ".")?;
 	public BatchStatementElements getBatchStatementAccess() {

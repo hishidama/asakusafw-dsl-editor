@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <ul>
  *   <li>{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.BatchStatementImpl#getName <em>Name</em>}</li>
  *   <li>{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.BatchStatementImpl#getJobName <em>Job Name</em>}</li>
+ *   <li>{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.BatchStatementImpl#isSoon <em>Soon</em>}</li>
  *   <li>{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.impl.BatchStatementImpl#getAfter <em>After</em>}</li>
  * </ul>
  * </p>
@@ -74,6 +75,26 @@ public class BatchStatementImpl extends MinimalEObjectImpl.Container implements 
    * @ordered
    */
   protected String jobName = JOB_NAME_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #isSoon() <em>Soon</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isSoon()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean SOON_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isSoon() <em>Soon</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isSoon()
+   * @generated
+   * @ordered
+   */
+  protected boolean soon = SOON_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getAfter() <em>After</em>}' reference list.
@@ -157,6 +178,29 @@ public class BatchStatementImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  public boolean isSoon()
+  {
+    return soon;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setSoon(boolean newSoon)
+  {
+    boolean oldSoon = soon;
+    soon = newSoon;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BatchDslPackage.BATCH_STATEMENT__SOON, oldSoon, soon));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<BatchStatement> getAfter()
   {
     if (after == null)
@@ -180,6 +224,8 @@ public class BatchStatementImpl extends MinimalEObjectImpl.Container implements 
         return getName();
       case BatchDslPackage.BATCH_STATEMENT__JOB_NAME:
         return getJobName();
+      case BatchDslPackage.BATCH_STATEMENT__SOON:
+        return isSoon();
       case BatchDslPackage.BATCH_STATEMENT__AFTER:
         return getAfter();
     }
@@ -202,6 +248,9 @@ public class BatchStatementImpl extends MinimalEObjectImpl.Container implements 
         return;
       case BatchDslPackage.BATCH_STATEMENT__JOB_NAME:
         setJobName((String)newValue);
+        return;
+      case BatchDslPackage.BATCH_STATEMENT__SOON:
+        setSoon((Boolean)newValue);
         return;
       case BatchDslPackage.BATCH_STATEMENT__AFTER:
         getAfter().clear();
@@ -227,6 +276,9 @@ public class BatchStatementImpl extends MinimalEObjectImpl.Container implements 
       case BatchDslPackage.BATCH_STATEMENT__JOB_NAME:
         setJobName(JOB_NAME_EDEFAULT);
         return;
+      case BatchDslPackage.BATCH_STATEMENT__SOON:
+        setSoon(SOON_EDEFAULT);
+        return;
       case BatchDslPackage.BATCH_STATEMENT__AFTER:
         getAfter().clear();
         return;
@@ -248,6 +300,8 @@ public class BatchStatementImpl extends MinimalEObjectImpl.Container implements 
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case BatchDslPackage.BATCH_STATEMENT__JOB_NAME:
         return JOB_NAME_EDEFAULT == null ? jobName != null : !JOB_NAME_EDEFAULT.equals(jobName);
+      case BatchDslPackage.BATCH_STATEMENT__SOON:
+        return soon != SOON_EDEFAULT;
       case BatchDslPackage.BATCH_STATEMENT__AFTER:
         return after != null && !after.isEmpty();
     }
@@ -269,6 +323,8 @@ public class BatchStatementImpl extends MinimalEObjectImpl.Container implements 
     result.append(name);
     result.append(", jobName: ");
     result.append(jobName);
+    result.append(", soon: ");
+    result.append(soon);
     result.append(')');
     return result.toString();
   }

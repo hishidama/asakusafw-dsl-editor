@@ -6,22 +6,22 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Import</b></em>'.
+ * A representation of the model object '<em><b>Import Declare</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.Import#getName <em>Name</em>}</li>
- *   <li>{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.Import#isWildcard <em>Wildcard</em>}</li>
+ *   <li>{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.ImportDeclare#getName <em>Name</em>}</li>
+ *   <li>{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.ImportDeclare#isWildcard <em>Wildcard</em>}</li>
  * </ul>
  * </p>
  *
- * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchDslPackage#getImport()
+ * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchDslPackage#getImportDeclare()
  * @model
  * @generated
  */
-public interface Import extends EObject
+public interface ImportDeclare extends EObject
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -33,14 +33,14 @@ public interface Import extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
-   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchDslPackage#getImport_Name()
+   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchDslPackage#getImportDeclare_Name()
    * @model
    * @generated
    */
   String getName();
 
   /**
-   * Sets the value of the '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.Import#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.ImportDeclare#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Name</em>' attribute.
@@ -59,14 +59,14 @@ public interface Import extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Wildcard</em>' attribute.
    * @see #setWildcard(boolean)
-   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchDslPackage#getImport_Wildcard()
+   * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchDslPackage#getImportDeclare_Wildcard()
    * @model
    * @generated
    */
   boolean isWildcard();
 
   /**
-   * Sets the value of the '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.Import#isWildcard <em>Wildcard</em>}' attribute.
+   * Sets the value of the '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.ImportDeclare#isWildcard <em>Wildcard</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Wildcard</em>' attribute.
@@ -75,4 +75,4 @@ public interface Import extends EObject
    */
   void setWildcard(boolean value);
 
-} // Import
+} // ImportDeclare

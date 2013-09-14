@@ -35,12 +35,12 @@ public interface Script extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Package</em>' containment reference.
-   * @see #setPackage(jp.hishidama.xtext.afw.batch_dsl.batchDsl.Package)
+   * @see #setPackage(PackageDeclare)
    * @see jp.hishidama.xtext.afw.batch_dsl.batchDsl.BatchDslPackage#getScript_Package()
    * @model containment="true"
    * @generated
    */
-  jp.hishidama.xtext.afw.batch_dsl.batchDsl.Package getPackage();
+  PackageDeclare getPackage();
 
   /**
    * Sets the value of the '{@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.Script#getPackage <em>Package</em>}' containment reference.
@@ -50,11 +50,11 @@ public interface Script extends EObject
    * @see #getPackage()
    * @generated
    */
-  void setPackage(jp.hishidama.xtext.afw.batch_dsl.batchDsl.Package value);
+  void setPackage(PackageDeclare value);
 
   /**
    * Returns the value of the '<em><b>Imports</b></em>' containment reference list.
-   * The list contents are of type {@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.Import}.
+   * The list contents are of type {@link jp.hishidama.xtext.afw.batch_dsl.batchDsl.ImportDeclare}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Imports</em>' containment reference list isn't clear,
@@ -66,7 +66,7 @@ public interface Script extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<Import> getImports();
+  EList<ImportDeclare> getImports();
 
   /**
    * Returns the value of the '<em><b>List</b></em>' containment reference list.

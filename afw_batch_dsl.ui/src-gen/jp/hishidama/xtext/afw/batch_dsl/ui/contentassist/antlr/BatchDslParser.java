@@ -42,10 +42,9 @@ public class BatchDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBatchStatementAccess().getAlternatives_3(), "rule__BatchStatement__Alternatives_3");
 					put(grammarAccess.getNameAccess().getAlternatives(), "rule__Name__Alternatives");
 					put(grammarAccess.getScriptAccess().getGroup(), "rule__Script__Group__0");
-					put(grammarAccess.getPackageAccess().getGroup(), "rule__Package__Group__0");
-					put(grammarAccess.getPackageAccess().getGroup_2(), "rule__Package__Group_2__0");
-					put(grammarAccess.getImportAccess().getGroup(), "rule__Import__Group__0");
-					put(grammarAccess.getImportAccess().getGroup_2(), "rule__Import__Group_2__0");
+					put(grammarAccess.getPackageDeclareAccess().getGroup(), "rule__PackageDeclare__Group__0");
+					put(grammarAccess.getImportDeclareAccess().getGroup(), "rule__ImportDeclare__Group__0");
+					put(grammarAccess.getImportDeclareAccess().getGroup_2(), "rule__ImportDeclare__Group_2__0");
 					put(grammarAccess.getBatchDslAccess().getGroup(), "rule__BatchDsl__Group__0");
 					put(grammarAccess.getBatchParameterAccess().getGroup(), "rule__BatchParameter__Group__0");
 					put(grammarAccess.getBatchParameterAccess().getGroup_3(), "rule__BatchParameter__Group_3__0");
@@ -60,10 +59,9 @@ public class BatchDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getScriptAccess().getPackageAssignment_0(), "rule__Script__PackageAssignment_0");
 					put(grammarAccess.getScriptAccess().getImportsAssignment_1(), "rule__Script__ImportsAssignment_1");
 					put(grammarAccess.getScriptAccess().getListAssignment_2(), "rule__Script__ListAssignment_2");
-					put(grammarAccess.getPackageAccess().getNameAssignment_1(), "rule__Package__NameAssignment_1");
-					put(grammarAccess.getPackageAccess().getNameAssignment_2_1(), "rule__Package__NameAssignment_2_1");
-					put(grammarAccess.getImportAccess().getNameAssignment_1(), "rule__Import__NameAssignment_1");
-					put(grammarAccess.getImportAccess().getWildcardAssignment_2_1(), "rule__Import__WildcardAssignment_2_1");
+					put(grammarAccess.getPackageDeclareAccess().getNameAssignment_1(), "rule__PackageDeclare__NameAssignment_1");
+					put(grammarAccess.getImportDeclareAccess().getNameAssignment_1(), "rule__ImportDeclare__NameAssignment_1");
+					put(grammarAccess.getImportDeclareAccess().getWildcardAssignment_2_1(), "rule__ImportDeclare__WildcardAssignment_2_1");
 					put(grammarAccess.getBatchDslAccess().getCommentAssignment_0(), "rule__BatchDsl__CommentAssignment_0");
 					put(grammarAccess.getBatchDslAccess().getParamsAssignment_1(), "rule__BatchDsl__ParamsAssignment_1");
 					put(grammarAccess.getBatchDslAccess().getNameAssignment_3(), "rule__BatchDsl__NameAssignment_3");
@@ -75,6 +73,7 @@ public class BatchDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBatchStatementAccess().getNameAssignment_1_0(), "rule__BatchStatement__NameAssignment_1_0");
 					put(grammarAccess.getBatchStatementAccess().getJobNameAssignment_1_1_0(), "rule__BatchStatement__JobNameAssignment_1_1_0");
 					put(grammarAccess.getBatchStatementAccess().getNameAssignment_1_1_2(), "rule__BatchStatement__NameAssignment_1_1_2");
+					put(grammarAccess.getBatchStatementAccess().getSoonAssignment_2_0(), "rule__BatchStatement__SoonAssignment_2_0");
 					put(grammarAccess.getBatchStatementAccess().getAfterAssignment_2_1_1(), "rule__BatchStatement__AfterAssignment_2_1_1");
 					put(grammarAccess.getBatchStatementAccess().getAfterAssignment_2_1_2_1(), "rule__BatchStatement__AfterAssignment_2_1_2_1");
 				}

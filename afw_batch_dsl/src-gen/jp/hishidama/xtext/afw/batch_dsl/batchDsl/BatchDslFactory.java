@@ -32,22 +32,22 @@ public interface BatchDslFactory extends EFactory
   Script createScript();
 
   /**
-   * Returns a new object of class '<em>Package</em>'.
+   * Returns a new object of class '<em>Package Declare</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Package</em>'.
+   * @return a new object of class '<em>Package Declare</em>'.
    * @generated
    */
-  Package createPackage();
+  PackageDeclare createPackageDeclare();
 
   /**
-   * Returns a new object of class '<em>Import</em>'.
+   * Returns a new object of class '<em>Import Declare</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Import</em>'.
+   * @return a new object of class '<em>Import Declare</em>'.
    * @generated
    */
-  Import createImport();
+  ImportDeclare createImportDeclare();
 
   /**
    * Returns a new object of class '<em>Batch Dsl</em>'.

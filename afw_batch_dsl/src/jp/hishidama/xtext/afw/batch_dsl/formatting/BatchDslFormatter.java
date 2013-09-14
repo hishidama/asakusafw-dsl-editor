@@ -38,7 +38,7 @@ public class BatchDslFormatter extends AbstractDeclarativeFormatter {
 		for (Keyword period : f.getFQNAccess().findKeywords(".")) {
 			c.setNoSpace().after(period);
 		}
-		for (Keyword period : f.getImportAccess().findKeywords(".")) {
+		for (Keyword period : f.getImportDeclareAccess().findKeywords(".")) {
 			c.setNoSpace().after(period);
 		}
 
@@ -60,13 +60,11 @@ public class BatchDslFormatter extends AbstractDeclarativeFormatter {
 		}
 
 		// package
-		c.setNoSpace().before(f.getPackageAccess().getFullStopKeyword_2_0());
-		c.setNoSpace().after(f.getPackageAccess().getFullStopKeyword_2_0());
-		c.setLinewrap(2).after(f.getPackageRule());
+		c.setLinewrap(2).after(f.getPackageDeclareRule());
 
 		// import
-		c.setLinewrap().after(f.getImportRule());
-		c.setLinewrap(2).between(f.getImportRule(), f.getBatchDslRule());
+		c.setLinewrap().after(f.getImportDeclareRule());
+		c.setLinewrap(2).between(f.getImportDeclareRule(), f.getBatchDslRule());
 
 		// Batch DSL
 		c.setLinewrap().after(f.getBatchDslAccess().getCommentAssignment_0());
