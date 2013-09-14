@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/afw_batch_dsl/src-gen" editDirectory="/afw_batch_dsl.edit/src"
+    editorDirectory="/afw_batch_dsl.editor/src" modelPluginID="afw_batch_dsl" forceOverwrite="true"
+    modelName="BatchDsl" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="afw_batch_dsl.edit"
+    editorPluginID="afw_batch_dsl.editor" runtimeVersion="2.9">
+  <genPackages prefix="BatchDsl" basePackage="jp.hishidama.xtext.afw.batch_dsl" disposableProviderFactory="true"
+      fileExtensions="bdsl" ecorePackage="BatchDsl.ecore#/">
+    <genClasses ecoreClass="BatchDsl.ecore#//Script">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BatchDsl.ecore#//Script/package"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BatchDsl.ecore#//Script/imports"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BatchDsl.ecore#//Script/list"/>
+    </genClasses>
+    <genClasses ecoreClass="BatchDsl.ecore#//Package">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BatchDsl.ecore#//Package/name"/>
+    </genClasses>
+    <genClasses ecoreClass="BatchDsl.ecore#//Import">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BatchDsl.ecore#//Import/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BatchDsl.ecore#//Import/wildcard"/>
+    </genClasses>
+    <genClasses ecoreClass="BatchDsl.ecore#//BatchDsl">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BatchDsl.ecore#//BatchDsl/comment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BatchDsl.ecore#//BatchDsl/params"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BatchDsl.ecore#//BatchDsl/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BatchDsl.ecore#//BatchDsl/statements"/>
+    </genClasses>
+    <genClasses ecoreClass="BatchDsl.ecore#//BatchParameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BatchDsl.ecore#//BatchParameter/comment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BatchDsl.ecore#//BatchParameter/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BatchDsl.ecore#//BatchParameter/pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BatchDsl.ecore#//BatchParameter/required"/>
+    </genClasses>
+    <genClasses ecoreClass="BatchDsl.ecore#//BatchStatement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BatchDsl.ecore#//BatchStatement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BatchDsl.ecore#//BatchStatement/jobName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BatchDsl.ecore#//BatchStatement/after"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

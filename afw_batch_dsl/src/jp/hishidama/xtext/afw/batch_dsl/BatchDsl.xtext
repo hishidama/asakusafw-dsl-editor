@@ -1,0 +1,57 @@
+grammar jp.hishidama.xtext.afw.batch_dsl.BatchDsl hidden(WS, ML_COMMENT, SL_COMMENT)
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+generate batchDsl "http://www.hishidama.jp/xtext/afw/batch_dsl/BatchDsl"
+
+Script:
+	package=Package
+	imports+=Import*
+	list+=BatchDsl*;
+
+Package:
+	'package' name+=Name ('.' name+=Name)* ';'?;
+
+Import:
+	'import' name=FQN ('.' wildcard?='*')? ';'?;
+
+BatchDsl:
+	comment=STRING?
+	params+=BatchParameter*
+	'batch' name=Name '{'
+	statements+=BatchStatement*
+	'}' ';'?;
+
+BatchParameter:
+	'@param' '('
+	comment=STRING?
+	('key' '=')? name=Name
+	(','? 'pattern' '=' pattern=STRING)?
+	(','? required?='required')?
+	')';
+
+BatchStatement:
+	'run' (name=FQN | (jobName=FQN 'as' name=Name))
+	('soon' |
+	'after' after+=[BatchStatement] (',' after+=[BatchStatement])*)
+	(';' | '.')?;
+
+FQN returns ecore::EString:
+	Name ('.' Name)*;
+
+Name:
+	ID | 'batch' | 'key' | 'pattern' | 'required' | 'run' | 'as' | 'soon' | 'after';
+
+terminal ID:
+	'^'? ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*;
+
+terminal STRING:
+	'"' ('\\' ('b' | 't' | 'n' | 'f' | 'r' | 'u' | '"' | "'" | '\\') | !('\\' | '"'))* '"';
+
+terminal ML_COMMENT:
+	'/*'->'*/';
+
+terminal SL_COMMENT:
+	('//' | '--') !('\n' | '\r')* ('\r'? '\n')?;
+
+terminal WS:
+	(' ' | '\t' | '\r' | '\n')+;
