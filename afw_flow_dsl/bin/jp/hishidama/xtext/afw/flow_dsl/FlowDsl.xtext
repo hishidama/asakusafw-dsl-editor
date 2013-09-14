@@ -1,0 +1,85 @@
+grammar jp.hishidama.xtext.afw.flow_dsl.FlowDsl hidden(WS, ML_COMMENT, SL_COMMENT)
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+generate flowDsl "http://www.hishidama.jp/xtext/afw/flow_dsl/FlowDsl"
+
+Script:
+	package=PackageDeclare
+	imports+=ImportDeclare*
+	operators+=OperatorDeclare*
+	list+=FlowDsl*;
+
+PackageDeclare:
+	'package' name=FQN ';'?;
+
+ImportDeclare:
+	'import' name=FQN ('.' wildcard?='*')? ';'?;
+
+OperatorDeclare:
+	'operator' operator=FQN 'as' name=Name ';'?;
+
+FlowDsl:
+	comment=STRING?
+	'jobflow' name=Name
+	'('
+	params+=FlowParameter+
+	')'
+	'{'
+	statements+=FlowStatement*
+	'}' ';'?;
+
+FlowParameter:
+	in=FlowIn | out=FlowOut;
+
+FlowIn:
+	inout='in' model=Name 'as' name=Name
+	(','? 'importer' importerDescription=FQN ('as' importerName=Name)?)?
+	(';' | '.')?;
+
+FlowOut:
+	inout='out' model=Name 'as' name=Name
+	(','? 'exporter' exporterDescription=FQN ('as' exporterName=Name)?)?
+	(';' | '.')?;
+
+FlowStatement:
+	FlowStatement1 | FlowStatement2;
+
+FlowStatement1:
+	(name=Name '=')? operator=[OperatorDeclare] '.' method=Name
+	'('
+	(arguments+=OperatorArgument (',' arguments+=OperatorArgument)*)?
+	')'
+	(';' | '.')?;
+
+FlowStatement2:
+	name=[FlowOut] '+='
+	'('
+	(arguments+=OperatorArgument (',' arguments+=OperatorArgument)*)?
+	')'
+	(';' | '.')?;
+
+OperatorArgument:
+	(in=[FlowIn] '.' name=Name) |
+	(in=[FlowStatement]);
+
+FQN returns ecore::EString:
+	Name ('.' Name)*;
+
+Name:
+	ID | 'operator' | 'jobflow' | 'in' | 'out' | 'as' | 'importer' | 'exporter';
+
+terminal ID:
+	'^'? ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*;
+
+terminal STRING:
+	'"' ('\\' ('b' | 't' | 'n' | 'f' | 'r' | 'u' | '"' | "'" | '\\') | !('\\' | '"'))* '"';
+
+terminal ML_COMMENT:
+	'/*'->'*/';
+
+terminal SL_COMMENT:
+	('//' | '--') !('\n' | '\r')* ('\r'? '\n')?;
+
+terminal WS:
+	(' ' | '\t' | '\r' | '\n')+; 
+	
