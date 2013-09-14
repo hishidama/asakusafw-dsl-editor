@@ -9,6 +9,8 @@ Batch DSLの例
 
   package com.example.batch
   
+  import com.example.jobflow.CategorySummaryJob
+  
   "売上の集計を計算する"
   @param("業務日付" date pattern = "\\d{4}-\\d{2}-\\d{2}")
   batch SummarizeBatch {
